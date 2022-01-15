@@ -8,46 +8,69 @@
     </head>
 
     <body>
+        <!-- Header -->
         <header>
-            <h1><img width=2% src="img/icon.png"></img>Hauntedland</h1>
-            <nav>
-                <a href="index.html">Home</a>
+            <img width=2% src="img/icon.png"></img>
+            <h1>Haunted Land</h1>
+            <nav> <!-- Site Navigation -->
+                <a href="index.html">Main</a>
                 <a href="things-to-do.html">Things To Do</a>
                 <a href="plan-ahead.html">Plan Ahead</a>
-                <button>Cart</button>
-                <button>Search</button>
+                <button>Sign in</button>
             </nav>
         </header>
 
         <nav>
-            Filters
+            <!-- Filters -->
+            <h2>Filters</h2>
+            <select name="category">
+                <option value="rides" selected>Rides</option>
+                <option value="food">Food</option>
+                <option value="shopping">Shopping</option>
+                <option value="fun">Entertainment</option>
+                <option value="facilities">Facilities</option>
+            </select>
+            <select name="age">
+                <option value="babies" selected>Babies and toddlers</option>
+                <option value="kids">Little Kids</option>
+                <option value="teens">Teens</option>
+                <option value="adults">Adults only</option>
+            </select>
+            <button type="submit">Search</button>
         </nav>
 
-        <section>
-            <h1>Haunted House</h1>
-            <h3>Tickle your nerves in our newest Haunted House with professional actors and state-of-art decorations</h3>
-        </section>
-        <section>
-            <h1>Highway To Hell</h1>
-            <h3>Multiple level ride you will never forget!</h3>
-        </section>
-        <section>
-            <h1>Jack-O-Lantern Cups</h1>
-            <h3>Ride you will never forget!</h3>
-        </section>
-        <section>
-            <h1>Ghost Hunters</h1>
-            <h3>Interactive quest for adults only</h3>
-        </section>
-        <section>
-            <h1>Graveyard Racing</h1>
-            <h3>Survive the zombie attack in a race between tombstones</h3>
-        </section>
+        <!-- Tiles with places-->
+        <main>
+            <div>
+                <h1>Haunted House</h1>
+                <img src="/img/haunted.jpg"></img>
+                <h3>Tickle your nerves in our newest Haunted House with professional actors and state-of-art decorations</h3>
+            </div>
+            <div>
+                <h1>Highway To Hell</h1>
+                <img src="/img/highway.jpg"></img>
+                <h3>Multiple level ride you will never forget!</h3>
+            </div>
+            <div>
+                <h1>Jack-O-Lantern Cups</h1>
+                <img src="/img/cups.jpg"></img>
+                <h3>Ride you will never forget!</h3>
+            </div>
+            <div>
+                <h1>Ghost Hunters</h1>
+                <img src="/img/ghost.jpg"></img>
+                <h3>Interactive quest for adults only</h3>
+            </div>
+            <div>
+                <h1>Graveyard Racing</h1>
+                <img src="/img/racing.jpg"></img>
+                <h3>Survive the zombie attack in a race between tombstones</h3>
+            </div>
+        </main>
 
         <footer>
-            <button>Get tickets now</button>
-            <div>Textbox</div>
-            <button>Calendar</button>
+            <a href="about.html">About us</a>
+            <a href="career.html">Career</a>
         </footer>
     </body>
 </html>

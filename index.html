@@ -3,44 +3,88 @@
 <html>
     <head>
         <title>
-            Hauntedland
+            Haunted Land
         </title>
     </head>
 
     <body>
+        <!-- Header -->
         <header>
-            <h1><img width=2% src="img/icon.png"></img>Hauntedland</h1>
-            <nav>
+            <img width=2% src="img/icon.png"></img>
+            <h1>Haunted Land</h1>
+            <nav> <!-- Site Navigation -->
                 <a href="index.html">Main</a>
                 <a href="things-to-do.html">Things To Do</a>
                 <a href="plan-ahead.html">Plan Ahead</a>
-                <button>Cart</button>
-                <button>Search</button>
+                <button>Sign in</button>
             </nav>
         </header>
 
+        <!-- Events -->
+        <main>
+            <div class="event-carousel"> <!-- Event carousel container -->
+                <div> <!-- Event number one -->
+                    <h2>Spooky New Year 2022! </h2>
+                    <img height=30% width=30% src="img/newyear.jpg"></img>
+                    
+                    <p>Join us for the most terrifying New Year's celebration!</p>
+                    <p>26.12.2021 - 31.01.2022</p>
+
+                </div>
+                <div> <!-- Event number two -->
+                    <h2>Love you to Death Party! </h2>
+                    <img height=30% width=30% src="img/newyear.jpg"></img>
+                    <p>St. Valentine's Party in Hauted Land!</p>
+                    <p>14.02.2022</p>
+                </div>
+                <!-- Navigation arrows -->
+                <a class="Back">&#10094;</a>
+                <a class="forward">&#10095;</a>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
         <aside>
-            <section>
-                Current weather
+            <section> <!-- Business hour section -->
+                <h3>Business hours:</h3>
+                <p>Open today:</p> 
+                <p>8:00 - 22:00</p>
             </section>
-            <section>
-                Open today: 8:00 - 22:00
+            <section> <!-- Weather section -->
+                <h2>Weather today</h2>
+                <div>
+                    <h3>Now:</h3>
+                    <p>70 degress, sunny, 1 m/s</p>
+                </div>
+                <div>
+                    <h3>Afternoon:</h3>
+                    <p>72 degress, cloudy, 2 m/s</p>
+                </div>
             </section>
         </aside>
 
-        <section>
-        <h1>Spooky New Year 2022! </h1>
-        <h2>26.12.2021 - 31.01.2022</h2>
-        <img height=30% width=30% src="img/newyear.jpg"></img>
-        <p>Join us for the most terrifying New Year's celebration!</p>
-        </section>
-        <section>
-        </section>
-
+        <!-- Footer -->
         <footer>
-            <button>Get tickets now</button>
-            <div>Textbox</div>
-            <button>Calendar</button>
+            <h2>Book tickets</h2>
+            <div> <!-- Inputs -->
+                <input type="date" value="2022-01-01">
+                <select name="ticket-type">
+                    <option value="allday" selected>All Day</option>
+                    <option value="morning">Morning</option>
+                    <option value="evening">Evening</option>
+                </select>
+
+                <!-- Quantity input -->
+                <label id="quantity">Quantity:</label>
+                <a class="back">&#10094;</a>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                <a class="forward">&#10095;</a>
+
+                <!-- More option button -->
+                <button id="more-options"><img src="more.jpg"></img></button>
+                <!-- Submit -->>
+                <button>Search</button>
+            </div>
         </footer>
     </body>
 </html>
