@@ -11,21 +11,20 @@
     <body>
         <!-- Header -->
         <header>
-            <div>
-                <img width=2% src="img/icon.png" alt="Haunted Land Logo"></img>
-                <h1>Haunted Land</h1>
-            </div>
-            <nav> <!-- Site Navigation -->
-                <a href="index.html">Main</a>
-                <a href="things-to-do.html">Things To Do</a>
-                <a href="plan-ahead.html">Plan Ahead</a>
-                <button>Sign in</button>
+            <h1 class="header-title">
+                <img width=3% src="img/icon.png" alt="Haunted Land Logo"></img>
+                Haunted Land  - The Spookiest Place of Earth
+            </h1>
+            <nav class="navigation"> <!-- Site Navigation -->
+                <a class="navigation" href="index.html">Main</a>
+                <a class="navigation" href="things-to-do.html">Things To Do</a>
+                <a class="navigation" href="plan-ahead.html">Plan Ahead</a>
             </nav>
         </header>
 
-        <nav>
+        <nav class="filters">
             <!-- Filters -->
-            <h2>Filters</h2>
+            <h3 class="filters-title"> Filters</h2>
             <select name="category">
                 <option value="rides" selected>Rides</option>
                 <option value="food">Food</option>
@@ -43,35 +42,36 @@
         </nav>
 
         <!-- Tiles with places-->
-        <main>
-            <div>
-                <h1>Haunted House</h1>
-                <img width=30% src="img/haunted.jpeg" alt="Haunted House"></img>
-                <h3>Tickle your nerves in our newest Haunted House with professional actors and state-of-art decorations</h3>
+        <main class="places">
+            <div class="places-item">
+                <h3 class="places-title">Haunted House</h3>
+                <img class="places-item-image" src="img/haunted.jpeg" alt="Haunted House"></img>
+                <h3 class="places-description">Tickle your nerves in our newest Haunted House with professional actors and state-of-art decorations</h3>
             </div>
-            <div>
-                <h1>Highway To Hell</h1>
-                <img width=30% src="img/highway.jpeg" alt="Highway To Hell"></img>
-                <h3>Multiple level ride you will never forget!</h3>
+            <div class="places-item">
+                <h3 class="places-title">Highway To Hell</h3>
+                <img class="places-item-image" src="img/highway.jpeg" alt="Highway To Hell"></img>
+                <h3 class="places-description"> Multiple level ride you will never forget!</h3>
             </div>
-            <div>
-                <h1>Jack-O-Lantern Cups</h1>
-                <img width=30% src="img/cups.jpeg" alt="Jack-O-Lantern Cups"></img>
-                <h3>Ride you will never forget!</h3>
+            <div class="places-item">
+                <h3 class="places-title">Jack-O-Lantern Cups</h3>
+                <img class="places-item-image" src="img/cups.jpeg" alt="Jack-O-Lantern Cups"></img>
+                <h3 class="places-description">Ride you will never forget!</h3>
             </div>
-            <div>
-                <h1>Ghost Hunters</h1>
-                <img width=30% src="img/ghost.jpeg" alt="Ghost Hunters"></img>
-                <h3>Interactive quest for adults only</h3>
+            <div class="places-item">
+                <h3 class="places-title">Ghost Hunters</h3>
+                <img class="places-item-image" src="img/ghost.jpeg" alt="Ghost Hunters"></img>
+                <h3 class="places-description">Interactive quest for adults only</h3>
             </div>
-            <div>
-                <h1>Graveyard Racing</h1>
-                <img width=30% src="img/racing.jpeg" alt="Graveyard Racing"></img>
-                <h3>Survive the zombie attack in a race between tombstones</h3>
+            <div class="places-item"    >
+                <h3 class="places-title">Graveyard Racing</h3>
+                <img class="places-item-image" src="img/racing.jpeg" alt="Graveyard Racing"></img>
+                <h3 class="places-description">Survive the zombie attack in a race between tombstones</h3>
             </div>
         </main>
 
         <footer>
+            (c) Haunted Land, 2022
             <a href="about.html">About us</a>
             <a href="career.html">Career</a>
         </footer>

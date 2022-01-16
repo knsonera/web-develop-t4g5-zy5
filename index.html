@@ -11,56 +11,57 @@
     <body>
         <!-- Header -->
         <header>
-            <div>
-                <img width=2% src="img/icon.png" alt="Haunted Land Logo"></img>
-                <h1>Haunted Land</h1>
-            </div>
-            <nav> <!-- Site Navigation -->
-                <a href="index.html">Main</a>
-                <a href="things-to-do.html">Things To Do</a>
-                <a href="plan-ahead.html">Plan Ahead</a>
-                <button>Sign in</button>
+                <h1 class="header-title">
+                    <img class="logo" src="img/icon.png" alt="Haunted Land Logo"></img>
+                    Haunted Land - The Spookiest Place of Earth
+                </h1>
+            <nav class="navigation"> <!-- Site Navigation -->
+                <a class="navigation" href="index.html">Main</a>
+                <a class="navigation" href="things-to-do.html">Things To Do</a>
+                <a class="navigation" href="plan-ahead.html">Plan Ahead</a>
             </nav>
         </header>
 
         <!-- Events -->
         <main>
             <div class="event-carousel"> <!-- Event carousel container -->
-                <div> <!-- Event number one -->
-                    <h2>Spooky New Year 2022! </h2>
-                    <img height=30% width=30% src="img/newyear.jpg" alt="Spooky New Year 2022"></img>
+                <div class="event-carousel-item"> <!-- Event number one -->
+                    <h2 class="event-name">Spooky New Year 2022! </h2>
+                    <img class="event-carousel-item-image" src="img/newyear.jpg" alt="Spooky New Year 2022"></img>
                     
-                    <p>Join us for the most terrifying New Year's celebration!</p>
-                    <p>26.12.2021 - 31.01.2022</p>
+                    <p class="event-description">Join us for the most terrifying New Year's celebration!</p>
+                    <p class="event-dates">26.12.2021 - 31.01.2022</p>
 
                 </div>
-                <div> <!-- Event number two -->
+                <div class="event-carousel-item"> <!-- Event number two -->
                     <h2>Love you to Death Party! </h2>
-                    <img height=30% width=30% src="img/love.jpeg" alt="St. Valentine's Party"></img>
-                    <p>St. Valentine's Party in Hauted Land!</p>
-                    <p>14.02.2022</p>
+                    <img class="event-carousel-item-image" src="img/love.jpeg" alt="St. Valentine's Party"></img>
+                    <p class="event-description">St. Valentine's Party in Hauted Land!</p>
+                    <p class="event-dates">14.02.2022</p>
                 </div>
-                <!-- Navigation arrows -->
+                <!-- TODO-->
+                <!-- Navigation arrows
                 <a class="Back">&#10094;</a>
-                <a class="forward">&#10095;</a>
+                <a class="forward">&#10095;</a>  -->
             </div>
 
-            <section>
-                <h2>Tickets</h2>
-                <h3>Adults</h3>
+            <section class="tickets">
+                <h2 class="tickets-title">Tickets</h2>
+                <h3 class="tickets-title-small">Adults</h3>
                 <ul>
                     <li>All day: $80</li>
                     <li>Early Bird: $50</li>
                     <li>Evening: $50</li>
                 </ul>
-                <h3>Kids, Students and Seniors</h3>
+                <h3 class="tickets-title-small">Kids, Students and Seniors</h3>
                 <ul>
                     <li>All day: $50</li>
                     <li>Early Bird: $30</li>
                     <li>Evening: $30</li>
                 </ul>
-                <h2>Book tickets</h2>
-                <div> <!-- Inputs -->
+
+                <h2 class="tickets-title">Book tickets</h2>
+                <div class="tickets-inputs"> <!-- Inputs -->
                     <input type="date" value="2022-01-01">
                     <select name="ticket-type">
                         <option value="allday" selected>All Day</option>
@@ -69,42 +70,40 @@
                     </select>
 
                     <!-- Quantity input -->
-                    <label id="quantity">Quantity:</label>
-                    <a class="back">&#10094;</a>
+                    <label id="quantity">Number of tickets:</label>
                     <input type="number" id="quantity" name="quantity" min="1" max="5">
-                    <a class="forward">&#10095;</a>
 
-                    <!-- More option button -->
-                    <button id="more-options"><img src="more.jpg"></img></button>
-                    <!-- Submit -->>
+                    <!-- Submit -->
                     <button>Search</button>
                 </div>
             </section>
         </main>
 
         <!-- Sidebar -->
-        <aside>
-            <section> <!-- Business hour section -->
-                <h2>Business hours:</h2>
-                <p>Open today:</p> 
-                <p>8:00 - 22:00</p>
+        <aside class="sidebar">
+            <section class="sidebar-item"> <!-- Business hour section -->
+                <h2 class="sidebar-title">Business hours:</h2>
+                <p class="sidebar-text">Open today:</p> 
+                <p class="sidebar-important">8:00 - 22:00</p>
             </section>
-            <section> <!-- Weather section -->
-                <h2>Weather today</h2>
+            <section class="sidebar-item"> <!-- Weather section -->
+                <h2 class="sidebar-title">Weather today</h2>
                 <div>
-                    <h3>Now:</h3>
-                    <p>70 degress, sunny, 1 m/s</p>
+                    <h3 class="sidebar-important">Now:</h3>
+                    <p class="sidebar-text">70 degress, sunny, 1 m/s</p>
                 </div>
                 <div>
-                    <h3>Afternoon:</h3>
-                    <p>72 degress, cloudy, 2 m/s</p>
+                    <h3 class="sidebar-important">Afternoon:</h3>
+                    <p class="sidebar-text">72 degress, cloudy, 2 m/s</p>
                 </div>
             </section>
         </aside>
 
         <!-- Footer -->
         <footer>
-            
+            (c) Haunted Land, 2022
+            <a href="about.html">About us</a>
+            <a href="career.html">Career</a>
         </footer>
     </body>
 </html>

@@ -11,25 +11,24 @@
     <body>
         <!-- Header -->
         <header>
-            <div>
-                <img width=2% src="img/icon.png" alt="Haunted Land Logo"></img>
-                <h1>Haunted Land</h1>
-            </div>
-            <nav> <!-- Site Navigation -->
-                <a href="index.html">Main</a>
-                <a href="things-to-do.html">Things To Do</a>
-                <a href="plan-ahead.html">Plan Ahead</a>
-                <button>Sign in</button>
+            <h1 class="header-title">
+                <img width=3% src="img/icon.png" alt="Haunted Land Logo"></img>
+                Haunted Land  - The Spookiest Place of Earth
+            </h1>
+            <nav class="navigation"> <!-- Site Navigation -->
+                <a class="navigation" href="index.html">Main</a>
+                <a class="navigation" href="things-to-do.html">Things To Do</a>
+                <a class="navigation" href="plan-ahead.html">Plan Ahead</a>
             </nav>
         </header>
 
         <container id="map">
-            <h2>Haunted Land Map</h2>
-            <img width="50%" src="img/map.png" alt="Park Map"></img>
+            <h2 class="map-title" >Haunted Land Map</h2>
+            <img class="map-image" src="img/map.png" alt="Park Map"></img>
         <!-- Google Maps code and components -->
         </container>
 
-        <section> <!--Information section below the map-->
+        <section class="parking"> <!--Information section below the map-->
             <div>
                 <h2>Parking information</h2>
                 <img width="50%" src="img/parking.png" alt="Parking Map"></img>
@@ -48,31 +47,31 @@
             </div>
             <div>
                 <h2>Contacts</h2>
-                <p>Tickets:</p>
-                <p>(800)600-00-01</p>
-                <p>Information:</p>
-                <p>(800)600-00-02</p>
-                <p>Customer Services:</p>
-                <p>(800)600-00-03</p>
-                <p>PR department:</p>
-                <p>(800)600-00-04</p>
+                <p class="info-important">Tickets:</p>
+                <p>(800) 600-00-01</p>
+                <p class="info-important">Information:</p>
+                <p>(800) 600-00-02</p>
+                <p class="info-important">Customer Services:</p>
+                <p>(800) 600-00-03</p>
+                <p class="info-important">PR department:</p>
+                <p>(800) 600-00-04</p>
             </div>
         </section>
 
         <!-- Sidebar -->
-        <aside>
+        <aside class="calendar">
             <section> <!-- Events section -->
-                <h2>Events:</h2>
-                <div>
-                    <h3>Today:</h3>
+                <h2 class="calendar-important">Events:</h2>
+                <div class="calendar-item">
+                    <h3 class="calendar-title">Today:</h3>
                     <ul>
                         <li>10:00 Fun with zombies</li>
                         <li>14:00 Spooky lunch</li>
                         <li>21:00 Fireworks</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Tomorrow:</h3>
+                <div class="calendar-item">
+                    <h3 class="calendar-title">Tomorrow:</h3>
                     <ul>
                         <li>10:00 Fun with zombies</li>
                         <li>21:00 Fireworks</li>
@@ -82,6 +81,7 @@
         </aside>
 
         <footer>
+            (c) Haunted Land, 2022
             <a href="about.html">About us</a>
             <a href="career.html">Career</a>
         </footer>

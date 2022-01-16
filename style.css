@@ -1,4 +1,304 @@
-html{
-    background-color: grey;
+html {
+    background-color: darkslategrey;
     color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Links */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightgray;
+    text-decoration: none;
+}
+
+/* Buttons */
+button {
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    background-color: rgb(58, 71, 58);
+    color: white;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+}
+
+select {
+    width: 102%;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+/* Title */
+.header-title {
+    vertical-align: middle;
+    font-family: fantasy;
+}
+
+.logo {
+    width: 3%;
+}
+
+/* Navigation */
+
+.navigation {
+    padding: 10px;
+    margin: 5px;
+}
+
+.navigation a {
+    background-color: lightslategray;
+}
+
+/* Carousel */
+
+.event-carousel-item {
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.event-carousel-item-image {
+    width: 100%;
+}
+
+.event-name {
+    margin-left: 10px;
+    color: rgb(73, 3, 3);
+}
+
+.event-description {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.event-dates {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+/* Tickets */
+
+.tickets {
+    margin: 20px;
+    padding: 5px;
+    color: black;
+    background-color: maroon;
+    border: 3px solid red;
+    width: 300px;
+}
+
+.tickets-title {
+    padding-left: 20px;
+    color: red;
+}
+
+.tickets-title-small {
+    padding-left: 20px;
+    color: black;
+}
+
+.tickets-inputs {
+    margin: 20px;
+}
+
+.tickets ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.tickets li {
+    padding-bottom: 10px;
+}
+
+#quantity {
+    margin-top: 10px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    margin: 20px;
+    padding: 5px;
+    border: 3px solid black;
+    width: 300px;
+}
+
+.sidebar-item {
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+}
+
+.sidebar-title {
+    padding-left: 20px;
+    color: darkred;
+}
+
+.sidebar-text {
+    padding-left: 20px;
+    color: black;
+}
+
+.sidebar-important {
+    padding-left: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Filters */
+
+.filters {
+    margin-left: 15px;
+    padding: 5px;
+    max-width: 180px;
+}
+
+.filters-title {
+    margin-bottom: 5px;
+}
+
+/* Things To Do */
+
+.places {
+    margin-left: 15px;
+    padding: 5px;
+    color: black;
+}
+
+.places-item {
+    max-width: 500px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 2px dotted black;
+}
+
+.places-title {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+    font-weight: bold;
+}
+
+.places-description {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.places-item-image {
+    width: 100%;
+    border: 2px solid black;
+}
+
+/* Map */
+
+.map-title {
+    color: lightgray;
+    margin-left: 15px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.map-image {
+    margin-left: 15px;
+    padding: 5px;
+    color: black;
+    width: 50%;
+    border: 2px dashed red;
+}
+
+/* Parking */
+
+.parking {
+    margin: 20px;
+    max-width: 600px;
+}
+
+.parking img {
+    width: 100%;
+    border: 2px solid red;
+}
+
+.parking h2 {
+    color: lightgray;
+    text-decoration: underline;
+}
+
+.parking h3 {
+    color: lightgray;
+}
+
+.info-important {
+    font-weight: bolder;
+    color: lightslategray;
+}
+
+/* Calendar */
+
+.calendar {
+    margin: 20px;
+    padding: 5px;
+    border: 3px solid black;
+    width: 300px;
+}
+
+.calendar-item {
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+}
+
+.calendar-title {
+    padding-left: 20px;
+    color: darkred;
+}
+
+.calendar-text {
+    padding-left: 20px;
+    color: black;
+}
+
+.calendar-important {
+    padding-left: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.calendar ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.calendar li {
+    padding-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+    padding: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer a {
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
 }
