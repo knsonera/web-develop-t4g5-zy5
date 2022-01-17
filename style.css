@@ -4,6 +4,26 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto 400px;
+    grid-template-areas: 
+    'header header'
+    'filters filters'
+    'main sidebar'
+    'footer footer'
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    grid-gap: 20px;
+    grid-template-columns: auto 400px;
+    grid-template-areas: 
+    'title nav'
+}
+
 /* Links */
 a {
     color: black;
@@ -17,6 +37,7 @@ a:visited {
 
 /* Buttons */
 button {
+    grid-area: button;
     width: 100px;
     height: 40px;
     font-size: large;
@@ -33,18 +54,33 @@ input {
 }
 
 select {
-    width: 102%;
+    grid-area: select;
     height: 30px;
     margin-bottom: 5px;
     background-color: black;
     color: white;
+    max-width: 240px;
 }
 
+select[name=category] {
+    grid-area: category;
+    height: 40px;
+    width: 120px;
+}
+select[name=age] {
+    height: 40px;
+    width: 180px;
+}
 
 /* Title */
 .header-title {
+    grid-area: title;
     vertical-align: middle;
     font-family: fantasy;
+}
+
+.title-motto {
+    font-size: 20px;
 }
 
 .logo {
@@ -54,17 +90,22 @@ select {
 /* Navigation */
 
 .navigation {
+    grid-area: nav;
+    min-width: 400px;
     padding: 10px;
     margin: 5px;
 }
 
 .navigation a {
-    background-color: lightslategray;
+    background-color: rgb(58, 71, 58);
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 /* Carousel */
 
 .event-carousel-item {
+    grid-area: carousel;
     width: 500px;
     padding: 20px;
     margin: 20px;
@@ -94,6 +135,7 @@ select {
 /* Tickets */
 
 .tickets {
+    grid-area: tickets;
     margin: 20px;
     padding: 5px;
     color: black;
@@ -126,12 +168,17 @@ select {
 }
 
 #quantity {
-    margin-top: 10px;
+    margin: 0px 0px 5px 2px;
+}
+
+input[name="quantity"] {
+    margin-bottom: 10px;
 }
 
 /* Sidebar */
 
 .sidebar {
+    grid-area: sidebar;
     margin: 20px;
     padding: 5px;
     border: 3px solid black;
@@ -163,13 +210,20 @@ select {
 /* Filters */
 
 .filters {
+    grid-area: filters;
     margin-left: 15px;
     padding: 5px;
-    max-width: 180px;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 60px 180px 120px auto;
+    grid-template-areas: 
+    'filters-title select category button'
 }
 
 .filters-title {
-    margin-bottom: 5px;
+    grid-area: filters-title;
+    margin-top: 5px;
 }
 
 /* Things To Do */
@@ -178,6 +232,10 @@ select {
     margin-left: 15px;
     padding: 5px;
     color: black;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
 }
 
 .places-item {
@@ -219,7 +277,7 @@ select {
     margin-left: 15px;
     padding: 5px;
     color: black;
-    width: 50%;
+    width: 80%;
     border: 2px dashed red;
 }
 
@@ -254,7 +312,6 @@ select {
 .calendar {
     margin: 20px;
     padding: 5px;
-    border: 3px solid black;
     width: 300px;
 }
 
@@ -289,9 +346,21 @@ select {
     padding-bottom: 10px;
 }
 
+.contacts {
+    padding: 5px 20px 20px 20px;
+    margin: 20px 5px;
+    background-color: cadetblue;
+}
+
+.contacts-title {
+    color:rgb(58, 71, 58);  
+    font-weight: 800;
+}
+
 /* Footer */
 
 footer {
+    grid-area: footer;
     padding: 20px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

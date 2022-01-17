@@ -13,7 +13,7 @@
         <header>
                 <h1 class="header-title">
                     <img class="logo" src="img/icon.png" alt="Haunted Land Logo"></img>
-                    Haunted Land - The Spookiest Place of Earth
+                    Haunted Land: <span class="title-motto">The Spookiest Place on Earth</span>
                 </h1>
             <nav class="navigation"> <!-- Site Navigation -->
                 <a class="navigation" href="index.html">Main</a>
@@ -44,6 +44,28 @@
                 <a class="Back">&#10094;</a>
                 <a class="forward">&#10095;</a>  -->
             </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <section class="sidebar">
+                <section class="sidebar-item"> <!-- Business hour section -->
+                    <h2 class="sidebar-title">Business hours:</h2>
+                    <p class="sidebar-text">Open today:</p> 
+                    <p class="sidebar-important">8:00 - 22:00</p>
+                </section>
+                <section class="sidebar-item"> <!-- Weather section -->
+                    <h2 class="sidebar-title">Weather today</h2>
+                    <div>
+                        <h3 class="sidebar-important">Now:</h3>
+                        <p class="sidebar-text">70 degress, sunny, 1 m/s</p>
+                    </div>
+                    <div>
+                        <h3 class="sidebar-important">Afternoon:</h3>
+                        <p class="sidebar-text">72 degress, cloudy, 2 m/s</p>
+                    </div>
+                </section>
+            </section>
 
             <section class="tickets">
                 <h2 class="tickets-title">Tickets</h2>
@@ -70,31 +92,11 @@
                     </select>
 
                     <!-- Quantity input -->
-                    <label id="quantity">Number of tickets:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5">
+                    <p id="quantity">Number of tickets:</p>
+                    <input type="number" name="quantity" min="1" max="5">
 
                     <!-- Submit -->
                     <button>Search</button>
-                </div>
-            </section>
-        </main>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <section class="sidebar-item"> <!-- Business hour section -->
-                <h2 class="sidebar-title">Business hours:</h2>
-                <p class="sidebar-text">Open today:</p> 
-                <p class="sidebar-important">8:00 - 22:00</p>
-            </section>
-            <section class="sidebar-item"> <!-- Weather section -->
-                <h2 class="sidebar-title">Weather today</h2>
-                <div>
-                    <h3 class="sidebar-important">Now:</h3>
-                    <p class="sidebar-text">70 degress, sunny, 1 m/s</p>
-                </div>
-                <div>
-                    <h3 class="sidebar-important">Afternoon:</h3>
-                    <p class="sidebar-text">72 degress, cloudy, 2 m/s</p>
                 </div>
             </section>
         </aside>
