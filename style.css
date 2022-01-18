@@ -18,6 +18,7 @@ body {
 }
 
 header {
+  width: 97%;
   position: fixed;
   display: grid;
   grid-area: header;
@@ -27,6 +28,7 @@ header {
   background-color: rgba(0, 0, 0, 0.9);
   margin-top: -10px;
   margin-left: -10px;
+
   border: 21px ridge rgba(170, 50, 220, 0.3);
   border-radius: 25px;
 }
@@ -92,15 +94,64 @@ select[name='age'] {
   font-size: 66px;
   color: rgb(138, 4, 109);
   letter-spacing: 3.2px;
+  margin-left: 40px;
 }
 
+/* .header-title-index {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: 1000%;
+    width: 1000%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+} */
+
 .title-motto {
-  font-size: 35px;
+  font-size: 39px;
   letter-spacing: 1.5px;
 }
 
 .logo {
-  width: 3%;
+  position: absolute;
+  width: 15%;
+
+  margin-top: -50px;
+  /* margin-bottom: 200%; */
+  margin-left: 55px;
+  opacity: 68%;
+}
+
+/* initial logo animation */
+.logo-index {
+  animation: fadein 1.32s, slidein 1.02s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 68%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 500%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 100%;
+    width: 15%;
+  }
 }
 
 /* Navigation */
@@ -123,6 +174,9 @@ select[name='age'] {
   font-size: 17px;
   font-family: 'Bangers', cursive;
   letter-spacing: 0.6px;
+}
+
+.navigation a:hover {
 }
 
 /* Carousel */
@@ -212,6 +266,10 @@ input[name='quantity'] {
   padding: 5px;
   margin: 5px;
   background-color: lightgray;
+}
+.sidebar-item:hover {
+  background-image: url('./img/icon.png');
+  background-repeat: no-repeat;
 }
 
 .sidebar-title {
