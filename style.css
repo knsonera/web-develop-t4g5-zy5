@@ -1,373 +1,396 @@
+/** @format */
+
 html {
-    background-color: darkslategrey;
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkslategrey;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: auto 400px;
-    grid-template-areas: 
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto 400px;
+  grid-template-areas:
     'header header'
     'filters filters'
     'main sidebar'
-    'footer footer'
+    'footer footer';
 }
 
 header {
-    display: grid;
-    grid-area: header;
-    grid-gap: 20px;
-    grid-template-columns: auto 400px;
-    grid-template-areas: 
-    'title nav'
+  position: fixed;
+  display: grid;
+  grid-area: header;
+  grid-gap: 20px;
+  grid-template-columns: auto 400px;
+  grid-template-areas: 'title nav';
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: -10px;
+  margin-left: -10px;
+  border: 21px ridge rgba(170, 50, 220, 0.3);
+  border-radius: 25px;
+}
+
+main,
+aside {
+  margin-top: 200px;
 }
 
 /* Links */
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:visited {
-    color: lightgray;
-    text-decoration: none;
+  color: lightgray;
+  text-decoration: none;
 }
 
 /* Buttons */
 button {
-    grid-area: button;
-    width: 100px;
-    height: 40px;
-    font-size: large;
-    background-color: rgb(58, 71, 58);
-    color: white;
+  grid-area: button;
+  width: 100px;
+  height: 40px;
+  font-size: large;
+  background-color: rgb(58, 71, 58);
+  color: white;
 }
 
 input {
-    width: 100%;
-    height: 30px;
-    margin-bottom: 5px;
-    background-color: black;
-    color: white;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: black;
+  color: white;
 }
 
 select {
-    grid-area: select;
-    height: 30px;
-    margin-bottom: 5px;
-    background-color: black;
-    color: white;
-    max-width: 240px;
+  grid-area: select;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: black;
+  color: white;
+  max-width: 240px;
 }
 
-select[name=category] {
-    grid-area: category;
-    height: 40px;
-    width: 120px;
+select[name='category'] {
+  grid-area: category;
+  height: 40px;
+  width: 120px;
 }
-select[name=age] {
-    height: 40px;
-    width: 180px;
+select[name='age'] {
+  height: 40px;
+  width: 180px;
 }
 
 /* Title */
 .header-title {
-    grid-area: title;
-    vertical-align: middle;
-    font-family: fantasy;
+  grid-area: title;
+  vertical-align: middle;
+  font-family: 'Bangers', cursive;
+  font-size: 66px;
+  color: rgb(138, 4, 109);
+  letter-spacing: 3.2px;
 }
 
 .title-motto {
-    font-size: 20px;
+  font-size: 35px;
+  letter-spacing: 1.5px;
 }
 
 .logo {
-    width: 3%;
+  width: 3%;
 }
 
 /* Navigation */
 
 .navigation {
-    grid-area: nav;
-    min-width: 400px;
-    padding: 10px;
-    margin: 5px;
+  grid-area: nav;
+  min-width: 400px;
+  padding: 20px;
+  margin-left: -10px;
+  margin-right: 25px;
+  margin-top: 50px;
 }
 
 .navigation a {
-    background-color: rgb(58, 71, 58);
-    border: 2px solid black;
-    border-radius: 5px;
+  /* background-color: rgb(58, 71, 58); */
+  background-color: rgba(242, 148, 24, 08);
+  border: 6px solid rgb(64, 9, 88);
+  border-radius: 25px;
+  color: rgb(58, 8, 8);
+  font-size: 17px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.6px;
 }
 
 /* Carousel */
 
 .event-carousel-item {
-    grid-area: carousel;
-    width: 500px;
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid black;
-    border-radius: 3px;
+  grid-area: carousel;
+  width: 500px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 3px;
 }
 
 .event-carousel-item-image {
-    width: 100%;
+  width: 100%;
 }
 
 .event-name {
-    margin-left: 10px;
-    color: rgb(73, 3, 3);
+  margin-left: 10px;
+  color: rgb(73, 3, 3);
 }
 
 .event-description {
-    margin-left: 10px;
-    font-style: italic;
+  margin-left: 10px;
+  font-style: italic;
 }
 
 .event-dates {
-    margin-left: 10px;
-    font-weight: 700;
+  margin-left: 10px;
+  font-weight: 700;
 }
 
 /* Tickets */
 
 .tickets {
-    grid-area: tickets;
-    margin: 20px;
-    padding: 5px;
-    color: black;
-    background-color: maroon;
-    border: 3px solid red;
-    width: 300px;
+  grid-area: tickets;
+  margin: 20px;
+  padding: 5px;
+  color: black;
+  background-color: maroon;
+  border: 3px solid red;
+  width: 300px;
 }
 
 .tickets-title {
-    padding-left: 20px;
-    color: red;
+  padding-left: 20px;
+  color: red;
 }
 
 .tickets-title-small {
-    padding-left: 20px;
-    color: black;
+  padding-left: 20px;
+  color: black;
 }
 
 .tickets-inputs {
-    margin: 20px;
+  margin: 20px;
 }
 
 .tickets ul {
-    list-style-type: none;
-    padding-left: 20px;
+  list-style-type: none;
+  padding-left: 20px;
 }
 
 .tickets li {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #quantity {
-    margin: 0px 0px 5px 2px;
+  margin: 0px 0px 5px 2px;
 }
 
-input[name="quantity"] {
-    margin-bottom: 10px;
+input[name='quantity'] {
+  margin-bottom: 10px;
 }
 
 /* Sidebar */
 
 .sidebar {
-    grid-area: sidebar;
-    margin: 20px;
-    padding: 5px;
-    border: 3px solid black;
-    width: 300px;
+  grid-area: sidebar;
+  margin: 20px;
+  padding: 5px;
+  border: 3px solid black;
+  width: 300px;
 }
 
 .sidebar-item {
-    padding: 5px;
-    margin: 5px;
-    background-color: lightgray;
+  padding: 5px;
+  margin: 5px;
+  background-color: lightgray;
 }
 
 .sidebar-title {
-    padding-left: 20px;
-    color: darkred;
+  padding-left: 20px;
+  color: darkred;
 }
 
 .sidebar-text {
-    padding-left: 20px;
-    color: black;
+  padding-left: 20px;
+  color: black;
 }
 
 .sidebar-important {
-    padding-left: 20px;
-    color: black;
-    font-weight: bold;
+  padding-left: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 /* Filters */
 
 .filters {
-    grid-area: filters;
-    margin-left: 15px;
-    padding: 5px;
+  grid-area: filters;
+  margin-left: 15px;
+  padding: 5px;
 
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 60px 180px 120px auto;
-    grid-template-areas: 
-    'filters-title select category button'
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 60px 180px 120px auto;
+  grid-template-areas: 'filters-title select category button';
 }
 
 .filters-title {
-    grid-area: filters-title;
-    margin-top: 5px;
+  grid-area: filters-title;
+  margin-top: 5px;
 }
 
 /* Things To Do */
 
 .places {
-    margin-left: 15px;
-    padding: 5px;
-    color: black;
+  margin-left: 15px;
+  padding: 5px;
+  color: black;
 
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: auto auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto;
 }
 
 .places-item {
-    max-width: 500px;
-    padding: 20px;
-    margin-bottom: 10px;
-    border: 2px dotted black;
+  max-width: 500px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px dotted black;
 }
 
 .places-title {
-    margin-top: 10px;
-    font-size: 25px;
-    font-family: fantasy;
-    font-weight: bold;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: fantasy;
+  font-weight: bold;
 }
 
 .places-description {
-    margin-top: 10px;
-    font-weight: normal;
+  margin-top: 10px;
+  font-weight: normal;
 }
 
 .places-item-image {
-    width: 100%;
-    border: 2px solid black;
+  width: 100%;
+  border: 2px solid black;
 }
 
 /* Map */
 
 .map-title {
-    color: lightgray;
-    margin-left: 15px;
-    padding: 5px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-left: 20px;
+  color: lightgray;
+  margin-left: 15px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
 }
 
 .map-image {
-    margin-left: 15px;
-    padding: 5px;
-    color: black;
-    width: 80%;
-    border: 2px dashed red;
+  margin-left: 15px;
+  padding: 5px;
+  color: black;
+  width: 80%;
+  border: 2px dashed red;
 }
 
 /* Parking */
 
 .parking {
-    margin: 20px;
-    max-width: 600px;
+  margin: 20px;
+  max-width: 600px;
 }
 
 .parking img {
-    width: 100%;
-    border: 2px solid red;
+  width: 100%;
+  border: 2px solid red;
 }
 
 .parking h2 {
-    color: lightgray;
-    text-decoration: underline;
+  color: lightgray;
+  text-decoration: underline;
 }
 
 .parking h3 {
-    color: lightgray;
+  color: lightgray;
 }
 
 .info-important {
-    font-weight: bolder;
-    color: lightslategray;
+  font-weight: bolder;
+  color: lightslategray;
 }
 
 /* Calendar */
 
 .calendar {
-    margin: 20px;
-    padding: 5px;
-    width: 300px;
+  margin: 50px;
+  margin-top: 200px;
+  padding: 5px;
+  width: 300px;
 }
 
 .calendar-item {
-    padding: 5px;
-    margin: 5px;
-    background-color: lightgray;
+  padding: 5px;
+  margin: 5px;
+  background-color: lightgray;
 }
 
 .calendar-title {
-    padding-left: 20px;
-    color: darkred;
+  padding-left: 20px;
+  color: darkred;
 }
 
 .calendar-text {
-    padding-left: 20px;
-    color: black;
+  padding-left: 20px;
+  color: black;
 }
 
 .calendar-important {
-    padding-left: 20px;
-    color: black;
-    font-weight: bold;
+  padding-left: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 .calendar ul {
-    list-style-type: none;
-    padding-left: 20px;
+  list-style-type: none;
+  padding-left: 20px;
 }
 
 .calendar li {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .contacts {
-    padding: 5px 20px 20px 20px;
-    margin: 20px 5px;
-    background-color: cadetblue;
+  padding: 5px 20px 20px 20px;
+  margin: 20px 5px;
+  background-color: cadetblue;
 }
 
 .contacts-title {
-    color:rgb(58, 71, 58);  
-    font-weight: 800;
+  color: rgb(58, 71, 58);
+  font-weight: 800;
 }
 
 /* Footer */
 
 footer {
-    grid-area: footer;
-    padding: 20px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-area: footer;
+  padding: 20px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer a {
-    color: white;
-    padding-right: 20px;
-    padding-left: 20px;
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
 }
