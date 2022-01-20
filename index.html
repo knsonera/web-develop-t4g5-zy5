@@ -14,6 +14,7 @@
     <meta name="refresh" content="600">
     <meta name="keywords" content="theme park haunted scary spooky fun 'family holiday' vacation">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/jpg" href="img/icon.png"/>
     <!-- google-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,56 +36,30 @@
         </nav>
     </header>
 
-    <!-- Events -->
+    <!-- Event carousel -->
     <main>
-        <div class="event-carousel">
-            <!-- Event carousel container -->
-            <div class="event-carousel-item">
-                <!-- Event number one -->
+        <div id="carousel-container">
+            <ul id="carousel">
+              <li class="slide">
                 <h2 class="event-name">Spooky New Year 2022! </h2>
-                <img class="event-carousel-item-image" src="img/newyear.jpg" alt="Spooky New Year 2022"></img>
-
-                <p class="event-description">Join us for the most terrifying New Year' s celebration!</p>
-                <p class="event-dates">26.12.2021 - 31.01.2022</p>
-
-            </div>
-            <div class="event-carousel-item">
-                <!-- Event number two -->
-                <h2>Love you to Death Party! </h2>
-                <img class="event-carousel-item-image" src="img/love.jpeg" alt="St. Valentine's Party"></img>
+                <img src="img/newyear.jpg" alt="New Year" />
+                <p class="event-description">Join us for the most terrifying New Year's celebration!</p>
+                <p class="event-dates">When: 26.12.2021 - 31.01.2022</p>
+              </li>
+              <img class="forward" src="img/arrow.png" alt="slide forward"></img>
+              <img class="back" src="img/arrow-left.png" alt="slide back"></img>
+              <li class="slide" id="love">
+                <h2 class="event-name">Love you to Death Party! </h2>
+                <img id="love" src="img/love.jpeg" alt="St Valentine's Day" />
                 <p class="event-description">St. Valentine's Party in Hauted Land!</p>
-                <p class="event-dates">14.02.2022</p>
-            </div>
-            <!-- TODO-->
-            <!-- Navigation arrows
-                <a class="Back">&#10094;</a>
-                <a class="forward">&#10095;</a>  -->
+                <p class="event-dates">When: 14.02.2022</p>
+              </li>
+            </ul>
         </div>
     </main>
 
-    <!-- Sidebar -->
+    <!-- Tickets -->
     <aside>
-        <section class="sidebar">
-            <section class="sidebar-item">
-                <!-- Business hour section -->
-                <h2 class="sidebar-title">Business hours:</h2>
-                <p class="sidebar-text">Open today:</p>
-                <p class="sidebar-important">8:00 - 22:00</p>
-            </section>
-            <section class="sidebar-item">
-                <!-- Weather section -->
-                <h2 class="sidebar-title">Weather today</h2>
-                <div>
-                    <h3 class="sidebar-important">Now:</h3>
-                    <p class="sidebar-text">70 degress, sunny, 1 m/s</p>
-                </div>
-                <div>
-                    <h3 class="sidebar-important">Afternoon:</h3>
-                    <p class="sidebar-text">72 degress, cloudy, 2 m/s</p>
-                </div>
-            </section>
-        </section>
-
         <section class="tickets">
             <h2 class="tickets-title">Tickets</h2>
             <h3 class="tickets-title-small">Adults</h3>
