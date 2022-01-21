@@ -19,6 +19,7 @@ body {
     'footer footer';
 }
 
+/* Fixed header */
 header {
   width: 98%;
   box-shadow: 0 0 1em 0.2em silver;
@@ -33,7 +34,6 @@ header {
   background-color: rgb(37, 16, 51, 0.9);
   margin-top: -10px;
   margin-left: -10px;
-
   border: 16px ridge rgba(170, 50, 220, 0.3);
   border-radius: 5px;
 }
@@ -53,6 +53,7 @@ a {
   text-decoration: none;
 }
 
+/* Highlight on hover */
 a:hover{
   cursor: pointer;
   box-shadow: 2px 2px 3px silver;
@@ -62,54 +63,6 @@ a:visited {
   color: lightgray;
   text-decoration: none;
 }
-
-/* animate nav button */
-a::after {
-  /* ghost entity */
-	content: "\01F47B"; 
-  visibility: hidden;
-	position: absolute;
-	top: 0px;
-	right: 50px;
-	transition:  right 200ms ease;
-}
-
-a.index:hover::after {
-	right: inherit;
-  bottom: inherit;
-  font-size: 30px;
-  opacity: 0.6;
-  visibility: visible;
-  text-shadow: 20px 2px 4px whitesmoke inset;
-  animation: sizeChange 6s infinite backwards;
-}
-
-
-a.todo:hover::after {
-	right: 0;
-  
-  font-size: 30px;
-  opacity: 0.5;
-  visibility: visible;
-  animation: sizeChange 5s infinite backwards;
-}
-
-a.plan:hover::after {
-	right: auto;
-  font-size: 50px;
-  opacity: 0.4;
-  visibility: visible;
-  animation:sizeChange 4s backwards infinite;
-}
-
-@keyframes sizeChange {
-  20% {font-size: 3em; text-shadow: 1px 1px 4px blanchedalmond ;}
-  50% {font-size: 4.3em; text-shadow: 2px 2px 7px bisque ;}
-  75% {font-size: 3.8em; text-shadow: 2px 2px 4px turquoise ;}
-
-}
-
-
 
 /* Buttons and inputs */
 button {
@@ -148,7 +101,7 @@ select[name='age'] {
   width: 180px;
 }
 
-/* Title */
+/* Header title and motto */
 
 .header-title {
   grid-area: title;
@@ -173,7 +126,6 @@ select[name='age'] {
 
   margin-top: -60px;
   margin-left: -160px;
-  /* margin-bottom: 200%; */
   opacity: 68%;
 }
 
@@ -226,6 +178,7 @@ select[name='age'] {
   margin-right: 15px;
 }
 
+/* Show a ghost image on hover */
 .navigation a:hover {
   background-image: url('./img/icon.png');
   background-repeat: no-repeat;
@@ -234,7 +187,52 @@ select[name='age'] {
   color: white;
 }
 
-/* Main Page: Carousel */
+/* Animation: nav button */
+a::after {
+  /* ghost entity */
+	content: "\01F47B"; 
+  visibility: hidden;
+	position: absolute;
+	top: 0px;
+	right: 50px;
+	transition:  right 200ms ease;
+}
+
+a.index:hover::after {
+	right: inherit;
+  bottom: inherit;
+  font-size: 30px;
+  opacity: 0.6;
+  visibility: visible;
+  text-shadow: 20px 2px 4px whitesmoke inset;
+  animation: sizeChange 6s infinite backwards;
+}
+
+a.todo:hover::after {
+	right: 0;
+  
+  font-size: 30px;
+  opacity: 0.5;
+  visibility: visible;
+  animation: sizeChange 5s infinite backwards;
+}
+
+a.plan:hover::after {
+	right: auto;
+  font-size: 50px;
+  opacity: 0.4;
+  visibility: visible;
+  animation:sizeChange 4s backwards infinite;
+}
+
+@keyframes sizeChange {
+  20% {font-size: 3em; text-shadow: 1px 1px 4px blanchedalmond ;}
+  50% {font-size: 4.3em; text-shadow: 2px 2px 7px bisque ;}
+  75% {font-size: 3.8em; text-shadow: 2px 2px 4px turquoise ;}
+
+}
+
+/* Main Page: Event Carousel */
 
 #carousel-container {
   height: 480px;
@@ -327,6 +325,7 @@ li {
   outline: hidden;
 }
 
+/* Animation: Enlarge on hover */
 .tickets:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -383,6 +382,8 @@ input[name='quantity'] {
   padding: 5px;
   background-color:rgb(129, 2, 112);
 }
+
+/* Animation: Show a ghost image on hover */
 .sidebar-item:hover {
   background-image: url('./img/icon.png');
   background-repeat: no-repeat;
@@ -447,6 +448,7 @@ input[name='quantity'] {
   background-color: rgb(250, 150, 35);
 }
 
+/* Swing tiles on hover */
 .places-item:hover {
         -webkit-animation: swing 1s ease;
         animation: swing 1s ease;
@@ -499,6 +501,7 @@ input[name='quantity'] {
   background-color: black;
 }
 
+/* Change "frame" color on hover */
 .map-image:hover {
   background-color: orange;
   -webkit-animation: bounce 0.5s ease;
@@ -523,6 +526,7 @@ input[name='quantity'] {
   animation-iteration-count: 1;
 }
 
+/* Animation: bounce (parking map) */
 @keyframes bounce {
   0%   { transform: translateY(0); }
   30%  { transform: translateY(-7px); }
@@ -572,8 +576,9 @@ input[name='quantity'] {
   border-radius: 2px;
 }
 
+/* Show a ghost image on hover */
 .calendar-item:hover {
-  background-image: url('./img/icon.png');
+  background-image: url('./img/icon.png'); 
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -635,8 +640,9 @@ footer a {
   padding-left: 20px;
 }
 
-/* Swing animation */
+/* Animations */
 
+/* Swing animation */
 @-webkit-keyframes swing
 {
     15%
