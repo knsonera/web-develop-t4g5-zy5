@@ -3,13 +3,13 @@
 html {
   background-color: rgb(80, 19, 67);
   color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: auto 400px;
+  grid-template-columns: auto 350px;
   grid-template-areas:
     'header header'
     'filters filters'
@@ -18,7 +18,8 @@ body {
 }
 
 header {
-  width: 97%;
+  width: 98%;
+  z-index: 1000;
   position: fixed;
   display: grid;
   grid-area: header;
@@ -30,12 +31,16 @@ header {
   margin-left: -10px;
 
   border: 16px ridge rgba(170, 50, 220, 0.3);
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
-main,
 aside {
   margin-top: 160px;
+}
+
+main {
+  margin-top: 130px;
+  display: grid;
 }
 
 /* Links */
@@ -92,14 +97,14 @@ select[name='age'] {
   grid-area: title;
   vertical-align: middle;
   font-family: 'Bangers', cursive;
-  font-size: 40px;
+  font-size: 36px;
   color: rgb(138, 4, 109);
   letter-spacing: 3.2px;
   margin-left: 140px;
 }
 
 .title-motto {
-  font-size: 30px;
+  font-size: 26px;
   letter-spacing: 1.5px;
 }
 
@@ -147,9 +152,9 @@ select[name='age'] {
   grid-area: nav;
   min-width: 400px;
   padding: 20px;
-  margin-left: -10px;
-  margin-right: 25px;
-  margin-top: 25px;
+  margin-left: -5px;
+  margin-right: 5px;
+  margin-top: 15px;
 }
 
 .navigation a {
@@ -161,6 +166,7 @@ select[name='age'] {
   font-size: 17px;
   font-family: 'Bangers', cursive;
   letter-spacing: 0.6px;
+  margin-right: 15px;
 }
 
 .navigation a:hover {
@@ -175,15 +181,12 @@ select[name='age'] {
 
 #carousel-container {
   height: 480px;
-  width: 600px;
+  max-width: 600px;
   margin-left: 30px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   --slide-count: 2;
-  border: 3px solid rgb(255, 102, 0);
-  border-radius: 5px;
-  border-style: groove;
 }
 
 #carousel {
@@ -228,9 +231,6 @@ li {
   width: 500px;
   padding: 10px;
   margin-left: 20px;
-  border: 2px solid orange;
-  border-radius: 5px;
-  border-style: groove;
 }
 
 .event-carousel-item-image {
@@ -238,7 +238,7 @@ li {
 }
 
 .event-name {
-  margin-left: 30px;
+  margin-left: 150px;
   margin-top: 5px;
   color: rgb(242, 148, 24);
 }
@@ -263,8 +263,8 @@ li {
   color: orange;
   background-color: rgb(73, 10, 92);
   border: 3px solid rgb(255, 102, 0);
-  border-radius: 5px;
-  width: 300px;
+  border-radius: 2px;
+  width: 320px;
 }
 
 .tickets:hover {
@@ -309,17 +309,16 @@ input[name='quantity'] {
 
 .sidebar {
   grid-area: sidebar;
-  margin-left: 30px;
-  margin-top: 10px;
-  padding: 5px;
-  border: 3px solid rgb(129, 52, 129);
-  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 15px;
+  border: 3px double rgb(129, 52, 129);
+  border-radius: 2px;
   width: 300px;
+  height: 375px;
 }
 
 .sidebar-item {
   padding: 5px;
-  margin: 5px;
   background-color:rgb(129, 2, 112);
 }
 .sidebar-item:hover {
@@ -348,10 +347,11 @@ input[name='quantity'] {
 /* Things to do: Filters */
 
 .filters {
+  display: grid;
   grid-area: filters;
   margin-left: 15px;
+  margin-top: 120px;
   padding: 5px;
-
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 60px 180px 120px auto;
@@ -366,10 +366,11 @@ input[name='quantity'] {
 /* Things To Do: Tiles */
 
 .places {
+  grid-area: main;
   margin-left: 15px;
+  margin-top: 10px;
   padding: 5px;
   color: rgb(78, 10, 10);
-
   display: grid;
   grid-gap: 20px;
   grid-template-columns: auto auto;
@@ -380,7 +381,7 @@ input[name='quantity'] {
   padding: 20px;
   margin-bottom: 10px;
   border: 10px double rgb(63, 26, 88);
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: rgb(250, 150, 35);
 }
 
@@ -404,8 +405,15 @@ input[name='quantity'] {
   font-weight: normal;
 }
 
+.places-info {
+  padding: 1px;
+  margin: 1px;
+  font-size: small;
+}
+
 .places-item-image {
   width: 100%;
+  height: 200px;
   border: 2px solid black;
 }
 
@@ -413,7 +421,7 @@ input[name='quantity'] {
 
 .map-title {
   color: orange;
-  margin-left: 195px;
+  margin-left: 230px;
   padding: 5px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -431,14 +439,33 @@ input[name='quantity'] {
 
 .map-image:hover {
   background-color: orange;
+  -webkit-animation: bounce 0.5s ease;
+  animation: bounce 0.5s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 /* Plan ahead: Parking */
 
 .parking {
-  margin: 25px;
-  max-width: 640px;
+  margin-top: 25px;
+  margin-left: 25px;
+  max-width: 680px;
   color:rgb(252, 180, 98)
+}
+
+.parking img:hover {
+  -webkit-animation: bounce 0.5s ease;
+  animation: bounce 0.5s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-7px); }
+  60%  { transform: translateY(7px); }
+  100% { transform: translateY(0); }
 }
 
 .parking img {
@@ -464,20 +491,21 @@ input[name='quantity'] {
 /* Plan ahead: Calendar */
 
 .calendar {
-  margin: 0px;
+  display: grid;
   padding: 15px;
-  margin-top: 170px;
+  margin-top: 160px;
+  margin-right: 30px;
   width: 300px;
   background-color:rgb(129, 2, 112);
   border: 5px solid rgb(73, 10, 92);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .calendar-item {
   padding: 5px;
   margin: 5px;
   background-color: rgb(242, 148, 24);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .calendar-item:hover {
@@ -489,6 +517,7 @@ input[name='quantity'] {
 
 .calendar-title {
   padding-left: 20px;
+  margin-top: 10px;
   color: darkred;
 }
 
@@ -499,6 +528,7 @@ input[name='quantity'] {
 
 .calendar-important {
   padding-left: 20px;
+  margin-top: 10px;
   color: rgb(242, 148, 24);
   font-weight: bold;
 }
@@ -530,11 +560,13 @@ input[name='quantity'] {
 footer {
   grid-area: footer;
   padding: 20px;
+  margin-left: 30px;
   color: orange;
 }
 
 footer a {
   color: orange;
+  margin-left: 30px;
   padding-right: 20px;
   padding-left: 20px;
 }
